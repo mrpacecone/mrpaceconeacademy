@@ -1210,3 +1210,176 @@ body {
 .section-content.active {
   animation: fadeInUp 0.3s ease;
 }
+
+/* ═══════════════════════════════════════════════
+   SYLLABUS STYLES
+═══════════════════════════════════════════════ */
+
+.syllabus-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+.syllabus-empty h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text); }
+
+.syllabus-meta-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.smb-item {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem 1.5rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.smb-item:last-child { border-right: none; }
+.smb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); }
+.smb-val { font-size: 14px; font-weight: 600; color: var(--text); }
+
+.syllabus-subjects { display: flex; flex-direction: column; gap: 1rem; }
+
+.syllabus-subject-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.syllabus-subject-card:hover { box-shadow: var(--shadow-sm); }
+
+.ssc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+.ssc-header:hover { background: var(--bg); }
+.ssc-left { display: flex; align-items: center; gap: 1rem; }
+.ssc-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.ssc-name { font-size: 1rem; font-weight: 700; color: var(--text); }
+.ssc-meta { font-size: 12px; color: var(--text-muted); margin-top: 0.2rem; }
+.ssc-right { display: flex; align-items: center; gap: 1rem; }
+.ssc-marks-pill { font-size: 12px; font-weight: 700; padding: 0.25rem 0.8rem; border-radius: 100px; }
+.ssc-toggle { font-size: 1rem; color: var(--text-muted); transition: transform 0.2s; }
+
+.ssc-body {
+  display: none;
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 0;
+}
+.ssc-body.open { display: block; }
+
+.chapter-row { border-bottom: 1px solid var(--bg); }
+.chapter-row:last-child { border-bottom: none; }
+
+.ch-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+.ch-header:hover { background: var(--bg); }
+.ch-num { font-size: 11px; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 100px; white-space: nowrap; }
+.ch-title { flex: 1; font-size: 14px; font-weight: 600; color: var(--text); }
+.ch-topics-count { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+.ch-arrow { color: var(--text-light); font-size: 1.2rem; transition: transform 0.2s; }
+
+.ch-topics {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem 1rem 4rem;
+}
+.ch-topics.open { display: flex; }
+
+.topic-pill {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  transition: all 0.15s;
+  cursor: default;
+}
+.topic-pill:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); }
+
+/* ═══════════════════════════════════════════════
+   STUDY PLANNER STYLES
+═══════════════════════════════════════════════ */
+
+.planner-exam-banner {
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  color: white;
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.peb-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; margin-bottom: 0.4rem; }
+.peb-days { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; line-height: 1; }
+.peb-hint { font-size: 12px; opacity: 0.7; margin-top: 0.3rem; }
+.peb-right input { background: white; color: var(--text); padding: 0.5rem 0.8rem; border-radius: 8px; border: none; font-family: var(--font-body); font-size: 14px; }
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+.week-day-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 0.8rem;
+  min-width: 120px;
+  transition: all 0.2s;
+}
+.week-day-card.today {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+}
+.week-day-card:hover { box-shadow: var(--shadow-sm); }
+.wdc-day { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.2rem; }
+.week-day-card.today .wdc-day { color: var(--brand); }
+.wdc-date { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; }
+.wdc-subject { font-size: 13px; font-weight: 700; color: var(--brand); background: var(--brand-light); padding: 0.3rem 0.6rem; border-radius: 6px; margin-bottom: 0.6rem; text-align: center; }
+.wdc-tasks { display: flex; flex-direction: column; gap: 0.3rem; }
+.wdc-task { font-size: 11px; color: var(--text-muted); }
+
+.planner-week { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+.planner-tips { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+
+.tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.tip-card { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; background: var(--bg); border-radius: var(--radius-sm); }
+.tip-icon { font-size: 1.5rem; flex-shrink: 0; }
+.tip-card strong { font-size: 14px; font-weight: 700; display: block; margin-bottom: 0.3rem; }
+.tip-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+@media (max-width: 900px) {
+  .week-grid { grid-template-columns: repeat(4, 1fr); }
+  .smb-item { min-width: 120px; }
+}
+@media (max-width: 600px) {
+  .week-grid { grid-template-columns: repeat(2, 1fr); }
+}
