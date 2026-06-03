@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mrpacecone Academy — Nepal's Premier Entrance Preparation Platform</title>
+  <meta name="description" content="Nepal's most advanced entrance preparation platform for Medical, Law, Engineering, Science, Management & more. AI-powered learning, question banks, mock tests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     LANDING PAGE
+═══════════════════════════════════════════════ -->
+<div id="landing-page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Mrpacecone <em>Academy</em></span>
+      </div>
+      <div class="nav-links">
+        <a href="#programs">Programs</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </div>
+      <button class="btn-start" onclick="enterApp()">Start Preparing →</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🇳🇵 Nepal's #1 Entrance Platform</div>
+      <h1 class="hero-title">
+        Crack Any<br/>
+        Entrance Exam<br/>
+        <em>with Confidence</em>
+      </h1>
+      <p class="hero-sub">Complete preparation ecosystem — verified notes, 50,000+ questions, AI tutor, mock tests & real-time progress tracking for every major Nepali entrance examination.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="enterApp()">Start Free Preparation →</button>
+        <button class="btn-ghost" onclick="showSection('mock-tests')">Try a Mock Test</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>20+</strong><span>Programs</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>50K+</strong><span>Questions</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Free Access</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>AI</strong><span>Powered</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-preview">
+        <div class="dp-header">
+          <span class="dp-dot red"></span><span class="dp-dot yellow"></span><span class="dp-dot green"></span>
+          <span class="dp-title">Student Dashboard</span>
+        </div>
+        <div class="dp-body">
+          <div class="dp-readiness">
+            <div class="readiness-label">MBBS Readiness</div>
+            <div class="readiness-ring">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="50" class="ring-bg"/>
+                <circle cx="60" cy="60" r="50" class="ring-fill" style="stroke-dasharray: 267; stroke-dashoffset: 53;"/>
+              </svg>
+              <div class="readiness-value">80%</div>
+            </div>
+          </div>
+          <div class="dp-subjects">
+            <div class="subj-row"><span>Physics</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div><span>80%</span></div>
+            <div class="subj-row"><span>Chemistry</span><div class="bar"><div class="bar-fill" style="width:70%"></div></div><span>70%</span></div>
+            <div class="subj-row"><span>Biology</span><div class="bar"><div class="bar-fill" style="width:92%"></div></div><span>92%</span></div>
+            <div class="subj-row"><span>Botany</span><div class="bar"><div class="bar-fill" style="width:65%"></div></div><span>65%</span></div>
+          </div>
+          <div class="dp-streak">
+            <span>🔥 14-day streak</span>
+            <span class="badge-gold">Gold Student</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs-section" id="programs">
+    <div class="section-inner">
+      <div class="section-label">Entrance Programs</div>
+      <h2 class="section-title">Every Major Exam.<br/>One Platform.</h2>
+      <div class="programs-grid">
+        <div class="prog-card medical" onclick="enterAppWithProgram('Medical','MBBS')">
+          <div class="prog-icon">🏥</div>
+          <div class="prog-name">Medical</div>
+          <div class="prog-list">MBBS · BDS · Nursing · Pharmacy · BPH · BMLT</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card law" onclick="enterAppWithProgram('Law','BALLB')">
+          <div class="prog-icon">⚖️</div>
+          <div class="prog-name">Law</div>
+          <div class="prog-list">BALLB · LLB</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card engineering" onclick="enterAppWithProgram('Engineering','BE Computer')">
+          <div class="prog-icon">⚙️</div>
+          <div class="prog-name">Engineering</div>
+          <div class="prog-list">Civil · Computer · Electronics · Mechanical · Architecture</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card science" onclick="enterAppWithProgram('Science','BSc CSIT')">
+          <div class="prog-icon">🔬</div>
+          <div class="prog-name">Science</div>
+          <div class="prog-list">Physics · Chemistry · Biology · Maths · CSIT</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card management" onclick="enterAppWithProgram('Management','BBA')">
+          <div class="prog-icon">📊</div>
+          <div class="prog-name">Management</div>
+          <div class="prog-list">BBA · BBM · BIM · BHM · BTTM</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card it" onclick="enterAppWithProgram('IT','BIT')">
+          <div class="prog-icon">💻</div>
+          <div class="prog-name">Information Technology</div>
+          <div class="prog-list">BIT · BCA · BSc CSIT</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card agriculture" onclick="enterAppWithProgram('Agriculture','BSc Agriculture')">
+          <div class="prog-icon">🌾</div>
+          <div class="prog-name">Agriculture</div>
+          <div class="prog-list">BSc Agriculture · Veterinary Sciences</div>
+          <div class="prog-arrow">→</div>
+        </div>
+        <div class="prog-card education" onclick="enterAppWithProgram('Education','BEd')">
+          <div class="prog-icon">📚</div>
+          <div class="prog-name">Education</div>
+          <div class="prog-list">BEd · Education Programs</div>
+          <div class="prog-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="section-inner">
+      <div class="section-label">Platform Features</div>
+      <h2 class="section-title">Everything You Need<br/>to Succeed</h2>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon">🤖</div>
+          <h3>AI Tutor</h3>
+          <p>Ask any academic question. Get instant, verified explanations with source citations from official curricula.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📝</div>
+          <h3>50,000+ Questions</h3>
+          <p>Nepal's largest entrance question bank with MCQs, subjective questions, and previous-year papers.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">⏱️</div>
+          <h3>Mock Tests</h3>
+          <p>Full simulation exams with timer, negative marking, auto-submission, and national rankings.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📈</div>
+          <h3>Progress Analytics</h3>
+          <p>Real-time tracking across chapters, subjects, and full syllabus. Know exactly where you stand.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">✅</div>
+          <h3>Verified Sources</h3>
+          <p>Every fact, answer, and explanation sourced from official university syllabi and government publications.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🏆</div>
+          <h3>Gamification</h3>
+          <p>Badges, streaks, milestones, and leaderboards keep you motivated throughout your preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER LANDING -->
+  <footer class="landing-footer">
+    <div class="logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">Mrpacecone <em>Academy</em></span>
+    </div>
+    <p>Nepal's most advanced entrance preparation platform.</p>
+    <p class="copyright">© All Rights Reserved to Mrpacecone Academy</p>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     MAIN APP (shown after clicking Start)
+═══════════════════════════════════════════════ -->
+<div id="app-page" class="hidden">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-header">
+      <div class="logo small">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Mrpacecone</span>
+      </div>
+      <button class="sb-close" onclick="toggleSidebar()">✕</button>
+    </div>
+
+    <!-- Program Selector -->
+    <div class="program-selector">
+      <select id="faculty-select" onchange="updatePrograms()">
+        <option value="">Choose Faculty</option>
+        <option value="Medical">🏥 Medical</option>
+        <option value="Law">⚖️ Law</option>
+        <option value="Engineering">⚙️ Engineering</option>
+        <option value="Science">🔬 Science</option>
+        <option value="Management">📊 Management</option>
+        <option value="IT">💻 IT</option>
+        <option value="Agriculture">🌾 Agriculture</option>
+        <option value="Education">📚 Education</option>
+      </select>
+      <select id="program-select">
+        <option value="">Choose Program</option>
+      </select>
+    </div>
+
+    <nav class="sb-nav">
+      <div class="sb-section-label">Main</div>
+      <a class="sb-link active" onclick="showSection('dashboard')" data-section="dashboard">
+        <span class="sb-icon">🏠</span> Dashboard
+      </a>
+      <a class="sb-link" onclick="showSection('progress')" data-section="progress">
+        <span class="sb-icon">📈</span> My Progress
+      </a>
+      <a class="sb-link" onclick="showSection('planner')" data-section="planner">
+        <span class="sb-icon">📅</span> Study Planner
+      </a>
+
+      <div class="sb-section-label">Learn</div>
+      <a class="sb-link" onclick="showSection('syllabus')" data-section="syllabus">
+        <span class="sb-icon">📖</span> Syllabus
+      </a>
+      <a class="sb-link" onclick="showSection('materials')" data-section="materials">
+        <span class="sb-icon">📄</span> Study Materials
+      </a>
+      <a class="sb-link" onclick="showSection('videos')" data-section="videos">
+        <span class="sb-icon">▶️</span> Video Lessons
+      </a>
+
+      <div class="sb-section-label">Practice</div>
+      <a class="sb-link" onclick="showSection('questions')" data-section="questions">
+        <span class="sb-icon">❓</span> Question Bank
+      </a>
+      <a class="sb-link" onclick="showSection('previous')" data-section="previous">
+        <span class="sb-icon">📋</span> Previous Questions
+      </a>
+      <a class="sb-link" onclick="showSection('mock-tests')" data-section="mock-tests">
+        <span class="sb-icon">⏱️</span> Mock Tests
+      </a>
+
+      <div class="sb-section-label">AI & Insights</div>
+      <a class="sb-link" onclick="showSection('ai-tutor')" data-section="ai-tutor">
+        <span class="sb-icon">🤖</span> AI Tutor
+      </a>
+      <a class="sb-link" onclick="showSection('analytics')" data-section="analytics">
+        <span class="sb-icon">📊</span> Analytics
+      </a>
+      <a class="sb-link" onclick="showSection('achievements')" data-section="achievements">
+        <span class="sb-icon">🏆</span> Achievements
+      </a>
+
+      <div class="sb-section-label">Community</div>
+      <a class="sb-link" onclick="showSection('news')" data-section="news">
+        <span class="sb-icon">📢</span> News & Notices
+      </a>
+      <a class="sb-link" onclick="showSection('forum')" data-section="forum">
+        <span class="sb-icon">💬</span> Discussion Forum
+      </a>
+
+      <div class="sb-section-label">System</div>
+      <a class="sb-link" onclick="showSection('admin')" data-section="admin">
+        <span class="sb-icon">🔧</span> Admin Panel
+      </a>
+    </nav>
+
+    <div class="sb-footer">
+      <button class="back-to-landing" onclick="backToLanding()">← Back to Home</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()">☰</button>
+      <div class="topbar-title" id="page-title">Dashboard</div>
+      <div class="topbar-right">
+        <div class="streak-badge">🔥 <span id="streak-count">14</span> days</div>
+        <div class="user-avatar">S</div>
+      </div>
+    </header>
+
+    <!-- SECTIONS -->
+    <div class="content-area">
+
+      <!-- DASHBOARD -->
+      <section id="sec-dashboard" class="section-content active">
+        <div class="sec-header">
+          <h2>Welcome back, Student! 👋</h2>
+          <p>Your entrance readiness is looking great. Keep the momentum going.</p>
+        </div>
+
+        <div class="readiness-banner">
+          <div class="rb-left">
+            <div class="rb-label">Overall Entrance Readiness</div>
+            <div class="rb-score" id="readiness-score">82%</div>
+            <div class="rb-bar"><div class="rb-bar-fill" id="readiness-bar" style="width:82%"></div></div>
+            <div class="rb-hint">Complete 18% more to achieve <strong>Excellent Readiness</strong></div>
+          </div>
+          <div class="rb-right">
+            <div class="rb-icon">🎯</div>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dc-label">Today's Study</div>
+            <div class="dc-value">3h 20m</div>
+            <div class="dc-sub">Goal: 4 hours</div>
+          </div>
+          <div class="dash-card">
+            <div class="dc-label">Questions Solved</div>
+            <div class="dc-value">247</div>
+            <div class="dc-sub">Today: 24 solved</div>
+          </div>
+          <div class="dash-card">
+            <div class="dc-label">Accuracy Rate</div>
+            <div class="dc-value">78%</div>
+            <div class="dc-sub">↑ 3% from last week</div>
+          </div>
+          <div class="dash-card">
+            <div class="dc-label">Mock Tests Taken</div>
+            <div class="dc-value">12</div>
+            <div class="dc-sub">Best rank: #45</div>
+          </div>
+        </div>
+
+        <div class="dash-two-col">
+          <div class="subject-progress-card">
+            <h3>Subject-wise Progress</h3>
+            <div class="sp-list" id="subject-list">
+              <div class="sp-row"><span class="sp-name">Physics</span><div class="sp-bar"><div class="sp-fill" style="width:80%"></div></div><span class="sp-pct">80%</span></div>
+              <div class="sp-row"><span class="sp-name">Chemistry</span><div class="sp-bar"><div class="sp-fill" style="width:70%"></div></div><span class="sp-pct">70%</span></div>
+              <div class="sp-row"><span class="sp-name">Biology</span><div class="sp-bar"><div class="sp-fill" style="width:92%"></div></div><span class="sp-pct">92%</span></div>
+              <div class="sp-row"><span class="sp-name">Botany</span><div class="sp-bar"><div class="sp-fill" style="width:65%"></div></div><span class="sp-pct">65%</span></div>
+              <div class="sp-row"><span class="sp-name">Zoology</span><div class="sp-bar"><div class="sp-fill" style="width:75%"></div></div><span class="sp-pct">75%</span></div>
+            </div>
+          </div>
+          <div class="today-goals-card">
+            <h3>Today's Goals</h3>
+            <div class="goal-list">
+              <div class="goal-item done"><span class="goal-check">✓</span> Complete Chapter 5 - Thermodynamics</div>
+              <div class="goal-item done"><span class="goal-check">✓</span> Solve 20 Chemistry MCQs</div>
+              <div class="goal-item"><span class="goal-check">○</span> Watch Cell Division video lecture</div>
+              <div class="goal-item"><span class="goal-check">○</span> Take Biology chapter test</div>
+              <div class="goal-item"><span class="goal-check">○</span> Review yesterday's mistakes</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUESTION BANK -->
+      <section id="sec-questions" class="section-content">
+        <div class="sec-header">
+          <h2>Question Bank ❓</h2>
+          <p>Practice from Nepal's largest entrance question bank — 50,000+ verified questions.</p>
+        </div>
+
+        <div class="filter-bar">
+          <select class="filter-sel" id="q-subject">
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Botany">Botany</option>
+            <option value="Zoology">Zoology</option>
+          </select>
+          <select class="filter-sel" id="q-difficulty">
+            <option value="all">All Difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <select class="filter-sel" id="q-type">
+            <option value="mcq">MCQ</option>
+            <option value="subjective">Subjective</option>
+          </select>
+          <button class="btn-filter" onclick="loadQuestions()">Load Questions</button>
+        </div>
+
+        <div id="question-container">
+          <!-- Questions rendered by JS -->
+        </div>
+      </section>
+
+      <!-- MOCK TESTS -->
+      <section id="sec-mock-tests" class="section-content">
+        <div class="sec-header">
+          <h2>Mock Tests ⏱️</h2>
+          <p>Full simulation entrance exams with timer, negative marking, and national rankings.</p>
+        </div>
+
+        <div id="mock-list">
+          <div class="mock-card" onclick="startMockTest()">
+            <div class="mock-tag medical">Medical</div>
+            <h3>MBBS Full Mock Test 2025</h3>
+            <div class="mock-meta">
+              <span>⏱️ 3 hours</span>
+              <span>📝 200 questions</span>
+              <span>⚠️ -0.25 negative marking</span>
+            </div>
+            <div class="mock-meta">
+              <span>👥 1,243 appeared</span>
+              <span>📊 Avg score: 142</span>
+            </div>
+            <button class="btn-primary small">Start Test →</button>
+          </div>
+          <div class="mock-card" onclick="startMockTest()">
+            <div class="mock-tag law">Law</div>
+            <h3>BALLB Entrance Mock 2025</h3>
+            <div class="mock-meta">
+              <span>⏱️ 2.5 hours</span>
+              <span>📝 150 questions</span>
+              <span>⚠️ No negative marking</span>
+            </div>
+            <button class="btn-primary small">Start Test →</button>
+          </div>
+          <div class="mock-card" onclick="startMockTest()">
+            <div class="mock-tag engineering">Engineering</div>
+            <h3>BE Computer Mock Test 2025</h3>
+            <div class="mock-meta">
+              <span>⏱️ 2 hours</span>
+              <span>📝 100 questions</span>
+            </div>
+            <button class="btn-primary small">Start Test →</button>
+          </div>
+        </div>
+
+        <!-- MOCK TEST INTERFACE (hidden by default) -->
+        <div id="mock-test-ui" class="hidden">
+          <div class="test-header">
+            <div class="test-title">MBBS Full Mock Test 2025</div>
+            <div class="test-timer" id="mock-timer">2:59:45</div>
+            <div class="test-progress">Q <span id="q-current">1</span> of <span id="q-total">200</span></div>
+          </div>
+          <div class="test-body">
+            <div class="test-question" id="test-q-text">The process by which plants make their own food using sunlight is called:</div>
+            <div class="test-options" id="test-options">
+              <div class="test-opt" onclick="selectOpt(this)">A. Respiration</div>
+              <div class="test-opt" onclick="selectOpt(this)">B. Photosynthesis</div>
+              <div class="test-opt" onclick="selectOpt(this)">C. Transpiration</div>
+              <div class="test-opt" onclick="selectOpt(this)">D. Fermentation</div>
+            </div>
+            <div class="test-actions">
+              <button class="btn-ghost" onclick="prevQ()">← Previous</button>
+              <button class="btn-primary" onclick="nextQ()">Next →</button>
+            </div>
+          </div>
+          <div class="test-footer">
+            <button class="btn-danger" onclick="submitTest()">Submit Test</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI TUTOR -->
+      <section id="sec-ai-tutor" class="section-content">
+        <div class="sec-header">
+          <h2>AI Tutor 🤖</h2>
+          <p>Ask any academic question. Get instant explanations with verified source citations.</p>
+        </div>
+        <div class="chat-container">
+          <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot">
+              <div class="chat-avatar">🤖</div>
+              <div class="chat-bubble">
+                Namaste! I'm your AI tutor for entrance exam preparation. I can explain concepts, solve problems, and cite official sources. What would you like to learn today?
+                <div class="source-tag">Powered by verified academic sources</div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-area">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask anything about your entrance syllabus..." onkeypress="if(event.key==='Enter') sendChat()" />
+            <button class="btn-send" onclick="sendChat()">Send →</button>
+          </div>
+          <div class="quick-questions">
+            <span class="qq-label">Quick ask:</span>
+            <button class="qq-btn" onclick="askQuestion('Explain photosynthesis for MBBS entrance')">Photosynthesis</button>
+            <button class="qq-btn" onclick="askQuestion('What is Newton\'s second law with example?')">Newton's Laws</button>
+            <button class="qq-btn" onclick="askQuestion('Explain cell division in simple terms')">Cell Division</button>
+            <button class="qq-btn" onclick="askQuestion('Define osmosis and give an example')">Osmosis</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREVIOUS QUESTIONS -->
+      <section id="sec-previous" class="section-content">
+        <div class="sec-header">
+          <h2>Previous Year Questions 📋</h2>
+          <p>Solve real past entrance papers from TU, IOM, MEC, and other universities.</p>
+        </div>
+        <div class="pyq-grid">
+          <div class="pyq-card">
+            <div class="pyq-year">2025</div>
+            <div class="pyq-exam">MBBS Entrance</div>
+            <div class="pyq-uni">Institute of Medicine (IOM)</div>
+            <div class="pyq-meta">200 Questions · 3 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+          <div class="pyq-card">
+            <div class="pyq-year">2024</div>
+            <div class="pyq-exam">MBBS Entrance</div>
+            <div class="pyq-uni">Institute of Medicine (IOM)</div>
+            <div class="pyq-meta">200 Questions · 3 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+          <div class="pyq-card">
+            <div class="pyq-year">2023</div>
+            <div class="pyq-exam">MBBS Entrance</div>
+            <div class="pyq-uni">Institute of Medicine (IOM)</div>
+            <div class="pyq-meta">200 Questions · 3 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+          <div class="pyq-card">
+            <div class="pyq-year">2025</div>
+            <div class="pyq-exam">BALLB Entrance</div>
+            <div class="pyq-uni">Tribhuvan University</div>
+            <div class="pyq-meta">150 Questions · 2.5 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+          <div class="pyq-card">
+            <div class="pyq-year">2025</div>
+            <div class="pyq-exam">BE Computer</div>
+            <div class="pyq-uni">Tribhuvan University</div>
+            <div class="pyq-meta">100 Questions · 2 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+          <div class="pyq-card">
+            <div class="pyq-year">2024</div>
+            <div class="pyq-exam">BSc CSIT</div>
+            <div class="pyq-uni">Tribhuvan University</div>
+            <div class="pyq-meta">100 Questions · 2 Hours</div>
+            <div class="pyq-actions">
+              <button class="btn-primary small" onclick="showSection('questions')">Solve Online</button>
+              <button class="btn-ghost small">Download PDF</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section id="sec-analytics" class="section-content">
+        <div class="sec-header">
+          <h2>Progress Analytics 📊</h2>
+          <p>Deep insights into your preparation journey.</p>
+        </div>
+        <div class="analytics-grid">
+          <div class="analytics-card big">
+            <h3>Weekly Activity</h3>
+            <div class="week-chart">
+              <div class="wc-bar-group"><div class="wc-bar" style="height:60%"></div><span>Mon</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:80%"></div><span>Tue</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:40%"></div><span>Wed</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:90%"></div><span>Thu</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:70%"></div><span>Fri</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:100%"></div><span>Sat</span></div>
+              <div class="wc-bar-group"><div class="wc-bar" style="height:50%"></div><span>Sun</span></div>
+            </div>
+          </div>
+          <div class="analytics-card">
+            <h3>Accuracy by Subject</h3>
+            <div class="acc-list">
+              <div class="acc-row"><span>Biology</span><span class="acc-val good">87%</span></div>
+              <div class="acc-row"><span>Physics</span><span class="acc-val ok">74%</span></div>
+              <div class="acc-row"><span>Chemistry</span><span class="acc-val ok">69%</span></div>
+              <div class="acc-row"><span>Botany</span><span class="acc-val warn">61%</span></div>
+            </div>
+          </div>
+          <div class="analytics-card">
+            <h3>Time Distribution</h3>
+            <div class="time-dist">
+              <div class="td-row"><span>📖 Reading</span><span>35%</span></div>
+              <div class="td-row"><span>❓ Practice</span><span>40%</span></div>
+              <div class="td-row"><span>⏱️ Tests</span><span>15%</span></div>
+              <div class="td-row"><span>🤖 AI Tutor</span><span>10%</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section id="sec-achievements" class="section-content">
+        <div class="sec-header">
+          <h2>Achievements 🏆</h2>
+          <p>Your milestones and badges earned through consistent preparation.</p>
+        </div>
+        <div class="streak-display">
+          <div class="streak-fire">🔥</div>
+          <div class="streak-num">14</div>
+          <div class="streak-label">Day Streak</div>
+        </div>
+        <div class="badges-grid">
+          <div class="badge-card earned"><div class="badge-emoji">🌟</div><div class="badge-name">First Step</div><div class="badge-desc">Completed first lesson</div></div>
+          <div class="badge-card earned"><div class="badge-emoji">🔥</div><div class="badge-name">On Fire</div><div class="badge-desc">7-day streak</div></div>
+          <div class="badge-card earned"><div class="badge-emoji">💯</div><div class="badge-name">Century</div><div class="badge-desc">100 questions solved</div></div>
+          <div class="badge-card earned"><div class="badge-emoji">🥇</div><div class="badge-name">Gold Student</div><div class="badge-desc">Top 10% accuracy</div></div>
+          <div class="badge-card"><div class="badge-emoji">🚀</div><div class="badge-name">Rocket</div><div class="badge-desc">Complete 50% syllabus</div></div>
+          <div class="badge-card"><div class="badge-emoji">👑</div><div class="badge-name">Champion</div><div class="badge-desc">Rank #1 in mock test</div></div>
+          <div class="badge-card"><div class="badge-emoji">📚</div><div class="badge-name">Scholar</div><div class="badge-desc">Complete full syllabus</div></div>
+          <div class="badge-card"><div class="badge-emoji">⚡</div><div class="badge-name">Speed Demon</div><div class="badge-desc">30-day streak</div></div>
+        </div>
+      </section>
+
+      <!-- NEWS & NOTICES -->
+      <section id="sec-news" class="section-content">
+        <div class="sec-header">
+          <h2>News & Notices 📢</h2>
+          <p>Latest entrance exam notices, university updates, and scholarship announcements.</p>
+        </div>
+        <div class="news-list">
+          <div class="news-card urgent">
+            <div class="news-tag urgent">⚡ Urgent</div>
+            <h3>IOM MBBS Entrance 2025 — Date Announced</h3>
+            <p>The Institute of Medicine has announced the MBBS entrance examination date for 2025. Registration opens next week.</p>
+            <div class="news-footer"><span>June 1, 2025</span><span>Source: IOM Official Notice</span></div>
+          </div>
+          <div class="news-card">
+            <div class="news-tag notice">📋 Notice</div>
+            <h3>TU BALLB Entrance Registration Open</h3>
+            <p>Tribhuvan University has opened online registration for BALLB entrance examination. Last date: June 30, 2025.</p>
+            <div class="news-footer"><span>May 28, 2025</span><span>Source: TU Official</span></div>
+          </div>
+          <div class="news-card">
+            <div class="news-tag scholarship">🎓 Scholarship</div>
+            <h3>Government Merit Scholarship for Medical Students</h3>
+            <p>Applications open for government merit-based scholarships for top MBBS entrance scorers. Apply before July 15.</p>
+            <div class="news-footer"><span>May 25, 2025</span><span>Source: Ministry of Education</span></div>
+          </div>
+          <div class="news-card">
+            <div class="news-tag update">🔄 Update</div>
+            <h3>BE Entrance Syllabus Updated by TU</h3>
+            <p>Tribhuvan University has released the updated syllabus for BE entrance examinations. Key changes in Mathematics section.</p>
+            <div class="news-footer"><span>May 20, 2025</span><span>Source: TU IOE</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN PANEL -->
+      <section id="sec-admin" class="section-content">
+        <div class="sec-header">
+          <h2>Admin Panel 🔧</h2>
+          <p>Manage content, questions, notices, and monitor student analytics.</p>
+        </div>
+        <div class="admin-grid">
+          <div class="admin-card" onclick="alert('Content upload module — connect your backend here')">
+            <div class="admin-icon">📄</div>
+            <h3>Upload Notes</h3>
+            <p>Add PDF notes, study materials, and documents for any program.</p>
+            <button class="btn-primary small">Manage →</button>
+          </div>
+          <div class="admin-card" onclick="alert('Question management module — connect your backend here')">
+            <div class="admin-icon">❓</div>
+            <h3>Manage Questions</h3>
+            <p>Add, edit, delete questions from the question bank.</p>
+            <button class="btn-primary small">Manage →</button>
+          </div>
+          <div class="admin-card" onclick="alert('Notice board module — connect your backend here')">
+            <div class="admin-icon">📢</div>
+            <h3>Post Notices</h3>
+            <p>Publish entrance exam notices, university updates, and scholarships.</p>
+            <button class="btn-primary small">Manage →</button>
+          </div>
+          <div class="admin-card" onclick="alert('Student analytics module — connect your backend here')">
+            <div class="admin-icon">📊</div>
+            <h3>Student Analytics</h3>
+            <p>Track student engagement, monitor performance, generate reports.</p>
+            <button class="btn-primary small">View →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDY MATERIALS -->
+      <section id="sec-materials" class="section-content">
+        <div class="sec-header">
+          <h2>Study Materials 📄</h2>
+          <p>Notes, PDFs, flashcards, formula sheets — all from verified official sources.</p>
+        </div>
+        <div class="materials-grid">
+          <div class="mat-card"><div class="mat-icon">📘</div><div class="mat-name">Physics Complete Notes</div><div class="mat-meta">TU Syllabus 2025 · PDF · 248 pages</div><div class="mat-source">Source: TU IOE Official Curriculum</div><button class="btn-ghost small">Download</button></div>
+          <div class="mat-card"><div class="mat-icon">⚗️</div><div class="mat-name">Organic Chemistry Guide</div><div class="mat-meta">IOM Curriculum · PDF · 180 pages</div><div class="mat-source">Source: IOM Official Syllabus</div><button class="btn-ghost small">Download</button></div>
+          <div class="mat-card"><div class="mat-icon">🧬</div><div class="mat-name">Cell Biology Flashcards</div><div class="mat-meta">200 cards · Verified</div><div class="mat-source">Source: NCERT & TU Biology Syllabus</div><button class="btn-ghost small">Download</button></div>
+          <div class="mat-card"><div class="mat-icon">∑</div><div class="mat-name">Mathematics Formula Sheet</div><div class="mat-meta">All formulas · Quick reference</div><div class="mat-source">Source: TU Mathematics Curriculum</div><button class="btn-ghost small">Download</button></div>
+        </div>
+      </section>
+
+      <!-- OTHER SECTIONS (placeholder) -->
+      <section id="sec-progress" class="section-content">
+        <div class="sec-header"><h2>My Progress 📈</h2><p>Your complete preparation journey at a glance.</p></div>
+        <div class="readiness-banner"><div class="rb-left"><div class="rb-label">Overall Entrance Readiness</div><div class="rb-score">82%</div><div class="rb-bar"><div class="rb-bar-fill" style="width:82%"></div></div></div><div class="rb-right"><div class="rb-icon">🎯</div></div></div>
+        <p style="text-align:center;margin-top:2rem;color:var(--text-muted)">Connect your backend to track real progress across all subjects and chapters.</p>
+      </section>
+
+      <section id="sec-planner" class="section-content">
+        <div class="sec-header"><h2>Study Planner 📅</h2><p>Your personalized AI-generated study schedule.</p></div>
+        <p style="text-align:center;margin-top:2rem;color:var(--text-muted)">Study planner module — connect your backend to generate personalized schedules based on exam date and progress.</p>
+      </section>
+
+      <section id="sec-syllabus" class="section-content">
+        <div class="sec-header"><h2>Syllabus 📖</h2><p>Complete chapter-wise, topic-wise syllabus for your selected program.</p></div>
+        <p style="text-align:center;margin-top:2rem;color:var(--text-muted)">Select a faculty and program from the sidebar to load the official syllabus.</p>
+      </section>
+
+      <section id="sec-videos" class="section-content">
+        <div class="sec-header"><h2>Video Lessons ▶️</h2><p>Curated video lectures organized by chapter and topic.</p></div>
+        <p style="text-align:center;margin-top:2rem;color:var(--text-muted)">Video lesson module — embed your YouTube playlist or LMS video links here.</p>
+      </section>
+
+      <section id="sec-forum" class="section-content">
+        <div class="sec-header"><h2>Discussion Forum 💬</h2><p>Ask questions, share knowledge, and learn from fellow students.</p></div>
+        <p style="text-align:center;margin-top:2rem;color:var(--text-muted)">Forum module — integrate with Disqus, Discord, or build a custom forum backend.</p>
+      </section>
+
+    </div>
+
+    <!-- APP FOOTER -->
+    <footer class="app-footer">
+      © All Rights Reserved to Mrpacecone Academy
+    </footer>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
